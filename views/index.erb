@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
-	<head></head>
+	<head>
+		<style type="text/css">
+			<% if message.include? "Way" %>
+				body {background: red;}
+			<% elsif message.include? "right" %>
+				body {background: green;}
+			<% else %>
+				body {background: OrangeRed;}
+			<% end %>
+		</style>	
+	</head>
 	<body>
 		<p>
 			<%= message %>	
