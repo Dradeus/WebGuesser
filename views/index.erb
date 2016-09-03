@@ -12,9 +12,14 @@
 		</style>	
 	</head>
 	<body>
-		<p>
-			<%= message %>	
-		</p>
+			<% if guesses == 0 %>
+				<p><%= message %></p>
+				<% message = "" %>	
+			<% else %>
+				<p><%= guesses %></p>
+				<p><%= message %></p>
+				<% message = "" %>
+			<% end %>
 		<p>
 			<% if message == "You got it right!"%>
 				The SECRET NUMBER is <%= number %>
